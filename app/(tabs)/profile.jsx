@@ -12,9 +12,11 @@ import {
   fetchUserData,
   getCurrentUserUid,
   updateUserData,
+  signOutApi
 } from "../../libs/api";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Button from "../../components/Button";
+import { router } from "expo-router";
 
 const Profile = () => {
   const [userData, setUserData] = useState(null);
@@ -75,6 +77,19 @@ const Profile = () => {
     }
   };
 
+  const handleSignOut = async () => {
+    setIsLoading(true);
+    try {
+      await signOutApi();
+      router.replace('/sign-in'); 
+      Alert.alert("Success", "Signout successfully!");
+    } catch (error) {
+      Alert.alert("Error", error.message);
+    }finally {
+      setIsLoading(false)
+    }
+  }
+
   // Loading Content
   if (loading) {
     return (
@@ -127,6 +142,11 @@ const Profile = () => {
           isLoading={isLoading}
         />
       </View>
+      <Button
+          label="Logout"
+          handlePress={handleSignOut}
+          isLoading={isLoading}
+        />
     </SafeAreaView>
   );
 };

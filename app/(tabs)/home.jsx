@@ -154,7 +154,7 @@ const Home = () => {
         keyExtractor={(item) => item.id.toString()}
         renderItem={({ item }) => (
           <View style={styles.itemContainer}>
-            <View>
+            <View style={{alignItems: "center"}}>
               <Image
                 source={{ uri: item.image }}
                 style={styles.itemImage}
@@ -170,13 +170,13 @@ const Home = () => {
               <View style={styles.ratingContainer}>
                 <Entypo
                   name="star"
-                  size={36}
+                  size={24}
                   style={{ fontWeight: "bold" }}
                   color="black"
                 />
-                <Text style={{ fontSize: 36 }}>{item.rating.toFixed(1)}</Text>
+                <Text style={{ fontSize: 24 }}>{item.rating.toFixed(1)}</Text>
               </View>
-              <Text style={{ fontSize: 36, color: "gray" }}>
+              <Text style={{ fontSize: 24, color: "gray" }}>
                 LKR {item.price}
               </Text>
               <TouchableOpacity onPress={() => handleAddItemToCart(item)}>
@@ -217,13 +217,14 @@ const styles = StyleSheet.create({
     marginBottom: 50,
     borderBottomWidth: 0.5,
     borderBottomColor: "#ccc",
+    // backgroundColor: "red",
   },
   itemImage: {
-    width: "100%",
-    height: 500,
+    width: "50%",
+    height: 250,
   },
   itemName: {
-    fontSize: 36,
+    fontSize: 24,
     fontWeight: "bold",
   },
 
