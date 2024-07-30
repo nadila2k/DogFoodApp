@@ -118,7 +118,7 @@ const fetchProducts = async (queryParams) => {
       productsRef = query(
         productsRef,
         where("slug", ">=", searchTextLower),
-        where("name", "<=", searchTextLower + "\uf8ff")
+        where("slug", "<=", searchTextLower + "\uf8ff")
       );
     }
 

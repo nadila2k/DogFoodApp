@@ -4,12 +4,12 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCtptiYdfp_IwFWTa4jV4ny-fkFPXkzpHc",
-  authDomain: "dog-app-40f5d.firebaseapp.com",
-  projectId: "dog-app-40f5d",
-  storageBucket: "dog-app-40f5d.appspot.com",
-  messagingSenderId: "642436354358",
-  appId: "1:642436354358:web:68ff7504c60faf79aba397"
+  apiKey: "AIzaSyDzDBVFGZSLUV150YM_e68pfqdpcqVSUkE",
+  authDomain: "dog-food-app-c2334.firebaseapp.com",
+  projectId: "dog-food-app-c2334",
+  storageBucket: "dog-food-app-c2334.appspot.com",
+  messagingSenderId: "332373077407",
+  appId: "1:332373077407:web:94287e1bc4e9e08bfa61aa"
 };
 
 const app = initializeApp(firebaseConfig);

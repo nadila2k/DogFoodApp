@@ -15,15 +15,15 @@ const TabIcon = ({ icon, name, color, focused }) => {
 
 const TabsLayout = () => {
 
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      if (!user) {
-        // Handle user not sign-in
-        router.replace('/sign-in'); 
-      }
-    });
-    return unsubscribe;
-  }, [])
+  // useEffect(() => {
+  //   const unsubscribe = onAuthStateChanged(auth, (user) => {
+  //     if (!user) {
+  //       // Handle user not sign-in
+  //       router.replace('/sign-in'); 
+  //     }
+  //   });
+  //   return unsubscribe;
+  // }, [])
 
   return (
     <>
