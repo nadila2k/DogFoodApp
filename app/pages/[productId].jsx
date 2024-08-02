@@ -65,24 +65,21 @@ const ProductDetails = () => {
         </View>
         <View style={styles.descriptionView}>
           <Text>{product.description}</Text>
-          <Text>{product.description}</Text>
         </View>
         <View style={styles.pointView}>
           <Text style={styles.textBold}>Category : {product.category} </Text>
           <Text style={styles.textBold}>Brand : {product.brand} </Text>
-          <Text style={styles.textBold}>Price : {product.price} </Text>
+          <Text style={styles.textBold}>Price : LKR{product.price} </Text>
           <Text style={styles.textBold}>Unit : {product.unit} </Text>
         </View>
         <View style={styles.ratingView}>
-          <Text style={styles.textBold}>Ratings</Text>
+          
           <View style={{flexDirection: "row"}}>
-            <FontAwesome5 name="star" size={24} color="black" />
-            <FontAwesome5 name="star" size={24} color="black" />
-            <FontAwesome5 name="star" size={24} color="black" />
-            <FontAwesome5 name="star" size={24} color="black" />
-            <FontAwesome5 name="star" size={24} color="black" />
-          </View>
+          <Text style={styles.textBold}>Ratings :</Text>
           <Text style={styles.textBold}>{product.rating}</Text>
+          <FontAwesome5 name="star" size={12} color="black" />
+          </View>
+          
         </View>
       </ScrollView>
     </SafeAreaView>
